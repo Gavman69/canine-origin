@@ -1,0 +1,9 @@
+{
+	"name": "Strong Diet",
+	"description": "Eating meat directly heals you, you also eat meat instantly, though you cant eat food in your offhand, you can also eat multiple foods without problems, inculding bones.",
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:food"
+    },
+    "always_edible": true
+}

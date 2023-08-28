@@ -1,0 +1,262 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "raw_meat": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:meat"
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:smeltable"
+                    }
+                },
+                {
+                    "type": "origins:using_item",
+                    "item_condition": {
+                        "type": "origins:meat"
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 3,
+                    "saturation": 0
+                },
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.generic.eat",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:heal",
+                    "amount": 3
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "cooked_meat": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:meat"
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "inverted": true,
+                        "type": "origins:smeltable"
+                    }
+                },
+                {
+                    "type": "origins:using_item",
+                    "item_condition": {
+                        "type": "origins:meat"
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 8,
+                    "saturation": 0
+                },
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.generic.eat",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:instant_health",
+                        "duration": 1,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "food": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:food"
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "inverted": true,
+                        "type": "origins:meat"
+                    }
+                },
+                {
+                    "type": "origins:using_item",
+                    "item_condition": {
+                        "type": "origins:food"
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 4,
+                    "saturation": 0
+                },
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.generic.eat",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:heal",
+                    "amount": 4
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "bone": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:bone"
+                        }
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 10,
+                    "saturation": 20
+                },
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.generic.eat",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    }
+}

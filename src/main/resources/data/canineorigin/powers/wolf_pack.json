@@ -1,0 +1,56 @@
+{
+    "type": "origins:multiple",
+    "name": "Wolf Pack",
+    "description": "You gain strength, speed, resistance, and more health if there are other wolfs nearby, players don't count.",
+    "da_effectings": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": -1,
+        "max_stacks": 10,
+        "tick_rate": 1,
+        "duration_per_stack": 2,
+        "effects": [
+            {
+                "effect": "minecraft:strength",
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": false,
+                "amplifier": 1
+            },
+            {
+                "effect": "minecraft:resistance",
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": false,
+                "amplifier": 1
+            },
+            {
+                "effect": "minecraft:speed",
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": false,
+                "amplifier": 0
+            }
+        ],
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if entity @e[type=wolf,distance=..16]",
+            "comparison": ">=",
+            "compare_to": 1
+        }
+    },
+    "add_health": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "value": 4,
+            "operation": "addition"
+        },
+        "tick_rate": 2,
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if entity @e[type=minecraft:wolf, distance=..16]",
+            "comparison": ">=",
+            "compare_to": 1
+        }
+    }
+}

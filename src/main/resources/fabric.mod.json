@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "canineorigin",
+	"version": "${version}",
+	"name": "Canine Origin",
+	"description": "Custom Origin called \"Canine\"",
+	"authors": [
+		"Gavman22"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.gavman.canineorigin.canineorigin"
+		],
+		"client": [
+			"com.gavman.canineorigin.canineoriginClient"
+		],
+		"fabric-datagen": [
+			"com.gavman.canineorigin.canineoriginDataGenerator"
+		]
+	},
+	"mixins": [
+		"canineorigin.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"origins": ">=1.10.0",
+		"extraorigins": ">=1.20-1",
+		"pehkui": ">=3.7.6"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

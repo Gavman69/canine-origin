@@ -1,0 +1,12 @@
+{
+	"name": "Doggy Paddle",
+	"description": "You sink in water slower.",
+    "type": "apoli:modify_falling",
+    "velocity": 0.01,
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "minecraft:water",
+        "comparison": ">",
+        "compare_to": 0.0
+    }
+}

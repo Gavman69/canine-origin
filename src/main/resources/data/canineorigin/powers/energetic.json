@@ -1,0 +1,22 @@
+{
+	"name": "Energetic",
+	"description": "Due to being so energetic, you run faster than normal, but you also lose hunger faster.",
+    "type": "origins:multiple",
+    "hunger_drain": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "name": "Extra exhaustion from energy",
+            "value": 0.4,
+            "operation": "multiply_base"
+        }
+    },
+    "faster_run": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "Energetic speed bonus",
+            "attribute": "minecraft:generic.movement_speed",
+            "value": 0.2,
+            "operation": "multiply_base"
+        }
+    }
+}

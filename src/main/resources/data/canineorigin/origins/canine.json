@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"canineorigin:bite_wolf",
+		"canineorigin:food_heal_direct",
+		"canineorigin:ravenous",
+		"canineorigin:fierce_looks",
+		"canineorigin:doggy_paddle",
+		"canineorigin:prevent_food_eat_offhand",
+		"canineorigin:energetic",
+		"canineorigin:daww_look_at_the_wittle_puppy",
+		"canineorigin:wolf_pack",
+		"origins:carnivore",
+		"origins:no_shield"
+	],
+	"icon": "minecraft:bone",
+	"order": 99,
+	"impact": 2,
+	"name": "Canine",
+	"description": "A mans best friend."
+}

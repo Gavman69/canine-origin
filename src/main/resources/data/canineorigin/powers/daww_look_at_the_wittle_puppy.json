@@ -1,0 +1,85 @@
+{
+	"name": "Puppy",
+	"description": "You have 6 hearts instead of 10, You are also smaller than other players, but you struggle to hold tools correctly, making you mine and attack slower with tools, you are yourself, slower with tools.",
+    "type": "origins:multiple",
+    "six_hearts": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "Puppy health debuff",
+            "attribute": "minecraft:generic.max_health",
+            "value": -8,
+            "operation": "addition"
+        }
+    },
+    "daww_the_puppy_is_small": {
+        "type": "extraorigins:modify_size",
+        "scale_types": [
+          "pehkui:width",
+          "pehkui:height",
+          "pehkui:drops",
+          "pehkui:visibility"
+        ],
+        "scale": 0.65
+    },
+    "that_tool_is_pretty_heavy_ngl_attack": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Puppy attack speed debuff",
+            "attribute": "minecraft:generic.attack_speed",
+            "value": -0.4,
+            "operation": "multiply_base"
+        },
+        "tick_rate": 2,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "minecraft:tools"
+                }
+            }
+        }
+    },
+    "that_tool_is_pretty_heavy_ngl_dig": {
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "value": -0.69,
+            "operation": "multiply_base"
+        },
+        "tick_rate": 2,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "minecraft:tools"
+                }
+            }
+        }
+    },
+    "that_tool_is_pretty_heavy_ngl_slowness": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": -3,
+        "max_stacks": 1,
+        "duration_per_stack": 3,
+        "effect": {
+            "effect": "minecraft:slowness",
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": false
+        },
+        "tick_rate": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "minecraft:tools"
+                }
+            }
+        }
+    }
+}

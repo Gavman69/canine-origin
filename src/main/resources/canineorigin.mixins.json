@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.gavman.canineorigin.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"FierceLooksMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
